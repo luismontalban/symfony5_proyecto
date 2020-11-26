@@ -1,20 +1,56 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout/master.html.twig' %}
 
-{% block title %}Hello CategoriaController!{% endblock %}
+ {% block titulo %}Registrar Emergencia{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+ 
+ 
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/laragon/www/symfony5/symfony_jetblack/src/Controller/CategoriaController.php'|file_link(0) }}">src/Controller/CategoriaController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/laragon/www/symfony5/symfony_jetblack/templates/categoria/index.html.twig'|file_link(0) }}">templates/categoria/index.html.twig</a></code></li>
-    </ul>
-</div>
+{% block form %}
+
+    <div class="container">
+        <div>
+            <h5 class="center-align">Categoria de productos</h5>
+        </div>
+    </div>
+
+    </br>
+    
+        {% for message in app.session.flashbag().get('message') %}
+
+            <center><strong>{{ message }}</strong></center>
+
+        {% endfor %}
+    
+    <div class="container">
+        <div class="row">
+
+            <div class="row card-panel" id="panelcate">
+                
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+
+            </div> 
+
+        </div> 
+
+    </div>
+
+
+
 {% endblock %}
+
+
+{% block javascripts %}
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="{{asset('assets/js/materialize.min.js')}}"></script>
+        
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+    M.AutoInit();
+});
+
+    </script>
+
+    {% endblock %}

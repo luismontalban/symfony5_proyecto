@@ -1,0 +1,27 @@
+
+
+
+nav .nav-wrapper{
+    background-color: #47D740 !important;
+}
+
+nav ul a:hover{
+    background-color: #64605F;
+    
+}
+
+#hola{
+    font-size: 60px;
+}
+
+
+#panelcate{
+    width: 25em !important;
+    margin: auto;
+}
+
+
+#panelpro{
+    width: 30em !important;
+    margin: auto;
+}

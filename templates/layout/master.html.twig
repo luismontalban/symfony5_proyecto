@@ -44,66 +44,21 @@
 
         <br/>
 
-        <div class="container">
-
-            <div>
-                <h2 class="center-align">Bienvenido al sistema</h2>
-
-            </div>
-            <br/>
-        </div>
-
-        
-        
-         <br/>
-
-        <div class="container">
-
-            <div>
-                <h5 class="center-align">Productos con Stock</h5>
-
-            </div>
-            <br/>
-        </div>
-
-
-
-        <div class="container">
-
-
-            <table class="responsive-table" id="tabla">
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-
-                        <th>Descripcion</th>
-                        <th>Precio</th>
-                        <th>Stock</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                   
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-
-
-
-        </div>
-
+       
     
     
     
     
     
     {% endblock %}
+    
+      {% block form %}
+            
+            {% endblock form %}
+
+    
+    
+    
     {% block javascripts %}
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="{{asset('assets/js/materialize.min.js')}}"></script>
