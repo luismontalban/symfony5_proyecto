@@ -66,4 +66,23 @@ class CategoriaController extends AbstractController
     
     
     
+    public function miscategorias()
+    {
+           $em = $this->getDoctrine()->getManager();
+
+        //AQUI SACAMOS TODOS LOS REGISTROS DE LA TABLA
+        $categoria_repo = $this->getDoctrine()
+                ->getRepository(Categoria::class);
+
+        $categorias = $categoria_repo->findAll();
+        
+                return $this->render('categoria/miscategorias.html.twig', [
+                    'categorias' => $categorias
+        ]);
+        
+        
+        
+    }
+    
+    
 }

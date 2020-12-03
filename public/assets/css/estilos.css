@@ -25,3 +25,12 @@ nav ul a:hover{
     width: 30em !important;
     margin: auto;
 }
+
+#boton:hover{
+    background-color: #8dda13;
+}
+
+
+#botonborrar:hover{
+    background-color: #ea0e0e !important;
+}

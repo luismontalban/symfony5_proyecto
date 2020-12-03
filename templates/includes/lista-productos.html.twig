@@ -1,0 +1,38 @@
+{% if productos|length >= 1 %}
+    <table class="responsive-table" id="tabla">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+               
+            
+
+
+        {% for producto in productos %}
+
+            <tbody>
+                   
+                    <tr>
+                        <td>{{producto.nombre}}</td>
+                        <td>{{producto.descripcion}}</td>
+                        <td>{{producto.precio}}</td>
+                        <td>{{producto.stock}}</td>
+                        <td><a href="#!"class="waves-effect waves-light btn-small"><i class="material-icons left">autorenew</i>Editar</a></td>
+                        <td><a href="#!"class="waves-effect waves-light btn-small" id="botonborrar"><i class="material-icons left">delete</i>Borrar</a></td>
+                    </tr>
+                    
+                </tbody>
+        {% endfor %}
+
+    </table>
+{% else %}
+    <strong>No hay productos</strong>
+{% endif %}
+

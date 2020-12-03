@@ -66,6 +66,25 @@ class ProductoController extends AbstractController
     }
     
     
+    public function misproductos()
+    {
+           $em = $this->getDoctrine()->getManager();
+
+        //AQUI SACAMOS TODOS LOS REGISTROS DE LA TABLA
+        $producto_repo = $this->getDoctrine()
+                ->getRepository(Producto::class);
+
+        $productos = $producto_repo->findAll();
+        
+                return $this->render('producto/misproductos.html.twig', [
+                    'productos' => $productos
+        ]);
+        
+        
+        
+    }
+    
+    
     
     
 }

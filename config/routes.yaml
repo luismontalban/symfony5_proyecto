@@ -4,10 +4,19 @@ index:
     
     
 crear-categoria:
-    path: /categoria
+    path: /savecategoria
     controller: App\Controller\CategoriaController::createcategoria
+    
+mis-categorias:
+    path: /categorias
+    controller: App\Controller\CategoriaController::miscategorias
     
     
 crear-producto:
-    path: /producto
-    controller: App\Controller\CategoriaController::createproducto
+    path: /saveproducto
+    controller: App\Controller\ProductoController::createproducto
+    
+    
+mis-productos:
+    path: /productos
+    controller: App\Controller\ProductoController::misproductos

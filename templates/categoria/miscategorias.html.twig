@@ -1,0 +1,45 @@
+{% extends 'layout/master.html.twig' %}
+
+ {% block titulo %}Categorias{% endblock %}
+
+
+ 
+ 
+
+{% block body %}
+
+    <div class="container">
+        <div>
+            <h5 class="center-align">Todas las categorias</h5>
+        </div>
+    </div>
+
+    </br>
+       
+       <div class="container">
+
+          
+       {{include('includes/lista-categorias.html.twig')}}
+           
+
+
+        </div>
+
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="{{asset('assets/js/materialize.min.js')}}"></script>
+        
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+    M.AutoInit();
+});
+
+    </script>
+
+    {% endblock %}
+
